@@ -1,0 +1,58 @@
+-- MySQL dump 10.16  Distrib 10.1.48-MariaDB, for debian-linux-gnu (x86_64)
+--
+-- Host: localhost    Database: dblogin
+-- ------------------------------------------------------
+-- Server version	10.1.48-MariaDB-0ubuntu0.18.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'aaa','$2y$10$.BxxQqhpt0iOB9UabwKzV.l/UazJ2nHKxYNNA.PVotWM8l2gslA1W','2022-03-16 02:22:41'),(2,'handy1','$2y$10$VRDp4wLAM0y5bWuWFYkxleB5Clbl06j4gTyUt0rMy9zuaV7K7f8mW','2022-03-16 02:23:52'),(3,'123456','$2y$10$P.6VqP097ptxGBk3B9kMWeWJAssEfjQQVjHFJLXPvZbW/i1pXbPAa','2022-03-16 02:25:57'),(4,'Test','$2y$10$4Le7ARSYqmzrGX2w2/RpeuR9e1a.adSZTCsXdJK2lxjCXqlaFGqNK','2022-03-16 02:28:06'),(5,'Tedja','$2y$10$Rl/YDjHLDzQ5PKW5cHb1l.anQLTEl6zFPAl1YA/jPRZ1LECGjDCYK','2022-03-16 02:36:22'),(6,'111111','$2y$10$MxXaWPVBKhhCUQVl9.bp7uz4nx21nrdeggl7pWv0YgPT3MsqEne8y','2022-03-16 03:13:37'),(7,'aaaaa','$2y$10$ayeT5wZI38cOS9I.LTc4hOWiKAECJyg5KPZ/ALyJOfNNEjl7iWCXO','2022-03-16 04:12:07'),(8,'a1a1a1','$2y$10$HVDKim3sRKfNIBxI2RlixO.KJhAUxD/uXX/OGG65iQDtwAzPUAbJe','2022-03-16 05:48:55'),(9,'1a1a1a','$2y$10$LwNAHeiL2QOfbGleNtKUSuafyIZoAvUzNPMk3cj3Bu6W8pyKc/YW6','2022-03-16 05:51:06'),(10,'h1h1h1','$2y$10$V5ePRex8mpYEcWgtGG7qHueTLGbt47lNM9Wk.xVNLgbAWo5YXvs/y','2022-03-16 05:53:31'),(11,'g1g1g1','$2y$10$3mckf3KhPFdUmCsBzxLU9eb2hZERllqgHql5Y5vmp/Nf5hI9V8yjy','2022-03-16 05:54:32');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping routines for database 'dblogin'
+--
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2022-03-18  5:41:25
